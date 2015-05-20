@@ -65,10 +65,6 @@
 		5176D1DE1B0A2EB200438C54 /* ServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceManager.h; sourceTree = "<group>"; };
 		5176D1DF1B0A2EB200438C54 /* ServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceManager.m; sourceTree = "<group>"; };
 		5176D1E01B0A2EB200438C54 /* TransferService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferService.h; sourceTree = "<group>"; };
-		5176D2091B0BB72600438C54 /* aa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aa.h; sourceTree = "<group>"; };
-		5176D20B1B0BB72600438C54 /* aa.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = aa.m; sourceTree = "<group>"; };
-		5176D2111B0BB72600438C54 /* aaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = aaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5176D2171B0BB72600438C54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,13 +83,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5176D20E1B0BB72600438C54 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -102,8 +91,6 @@
 			children = (
 				5176D1BC1B0A2DF800438C54 /* IntroMiKit */,
 				5176D1C91B0A2DF800438C54 /* IntroMiKitTests */,
-				5176D2081B0BB72600438C54 /* aa */,
-				5176D2151B0BB72600438C54 /* aaTests */,
 				5176D1BB1B0A2DF800438C54 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,7 +100,6 @@
 			children = (
 				5176D1BA1B0A2DF800438C54 /* IntroMiKit.framework */,
 				5176D1C51B0A2DF800438C54 /* IntroMiKitTests.xctest */,
-				5176D2111B0BB72600438C54 /* aaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,31 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				5176D1CB1B0A2DF800438C54 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5176D2081B0BB72600438C54 /* aa */ = {
-			isa = PBXGroup;
-			children = (
-				5176D2091B0BB72600438C54 /* aa.h */,
-				5176D20B1B0BB72600438C54 /* aa.m */,
-			);
-			path = aa;
-			sourceTree = "<group>";
-		};
-		5176D2151B0BB72600438C54 /* aaTests */ = {
-			isa = PBXGroup;
-			children = (
-				5176D2161B0BB72600438C54 /* Supporting Files */,
-			);
-			path = aaTests;
-			sourceTree = "<group>";
-		};
-		5176D2161B0BB72600438C54 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5176D2171B0BB72600438C54 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -244,23 +205,6 @@
 			productReference = 5176D1C51B0A2DF800438C54 /* IntroMiKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		5176D2101B0BB72600438C54 /* aaTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5176D21B1B0BB72600438C54 /* Build configuration list for PBXNativeTarget "aaTests" */;
-			buildPhases = (
-				5176D20D1B0BB72600438C54 /* Sources */,
-				5176D20E1B0BB72600438C54 /* Frameworks */,
-				5176D20F1B0BB72600438C54 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = aaTests;
-			productName = aaTests;
-			productReference = 5176D2111B0BB72600438C54 /* aaTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -277,9 +221,6 @@
 						CreatedOnToolsVersion = 6.3.1;
 					};
 					5176D1EC1B0A2F1700438C54 = {
-						CreatedOnToolsVersion = 6.3.1;
-					};
-					5176D2101B0BB72600438C54 = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
 				};
@@ -299,7 +240,6 @@
 				5176D1B91B0A2DF800438C54 /* IntroMiKit */,
 				5176D1C41B0A2DF800438C54 /* IntroMiKitTests */,
 				5176D1EC1B0A2F1700438C54 /* IntroMiKit-Universal */,
-				5176D2101B0BB72600438C54 /* aaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -313,13 +253,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5176D1C31B0A2DF800438C54 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5176D20F1B0BB72600438C54 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -362,13 +295,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5176D1CD1B0A2DF800438C54 /* IntroMiKitTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5176D20D1B0BB72600438C54 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,37 +487,6 @@
 			};
 			name = Release;
 		};
-		5176D21C1B0BB72600438C54 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = aaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		5176D21D1B0BB72600438C54 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = aaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -611,6 +506,7 @@
 				5176D1D21B0A2DF800438C54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5176D1D31B0A2DF800438C54 /* Build configuration list for PBXNativeTarget "IntroMiKitTests" */ = {
 			isa = XCConfigurationList;
@@ -619,6 +515,7 @@
 				5176D1D51B0A2DF800438C54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5176D1ED1B0A2F1700438C54 /* Build configuration list for PBXAggregateTarget "IntroMiKit-Universal" */ = {
 			isa = XCConfigurationList;
@@ -627,14 +524,7 @@
 				5176D1EF1B0A2F1700438C54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		5176D21B1B0BB72600438C54 /* Build configuration list for PBXNativeTarget "aaTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5176D21C1B0BB72600438C54 /* Debug */,
-				5176D21D1B0BB72600438C54 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
