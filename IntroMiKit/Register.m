@@ -19,27 +19,41 @@
 @end
 
 
-
 @implementation Register
 
 
+//initilize the object.
 
-- (id)initWithUinqueId:(NSString *)uinqueId andCompanyToken:(NSString *)companyToken andName:(NSString*)name andCompletionHandler:(void (^)(int result))completionHandler andConnectionErrors:(void(^)(NSString *error)) connectioErrors {
-  
-    
+
+
+
+
+- (instancetype)initWithUinqueId:(NSString *)uinqueId andCompanyToken:(NSString *)companyToken andName:(NSString*)name {
+
+   
     self = [super init];
     if(self) {
     self.userId = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
     self.uniqueId =uinqueId;
-    self.today = [NSDate date];
     self.name = name;
-    double today = [[NSDate date] timeIntervalSince1970 ]*1000000;
+    self.today = [[NSDate date] timeIntervalSince1970 ]*1000000;
+        
+    }
+       return self;
+}
+
+-(void)doRegistration:(void (^)(int result))completionHandler andConnectionErrors:(void(^)(NSString *error)) connectioErrors {
+
+        
     NSDictionary *dict = @{@"intromi_id" : self.userId,
                                @"company_id" : self.uniqueId,
-                               @"time_stamp" : @(today).stringValue,
+                               @"time_stamp" : @(self.today).stringValue,
                                @"name"        :self.name};
         NSError *error = nil;
         NSData *json;
+        
+        
+        
         
         // Dictionary convertable to JSON ?
         if ([NSJSONSerialization isValidJSONObject:dict])
@@ -87,8 +101,8 @@
         }
         else
         completionHandler(1);
-    }
-    return self;
+    
+
     
 }
 

@@ -17,12 +17,13 @@
 
 @property (nonatomic,strong)  NSString* userId;
 @property (nonatomic,strong)  NSString* uniqueId;
-@property (nonatomic,strong) NSDate *today;
-@property (nonatomic,strong) NSString *name;
+@property (nonatomic)         double today;
+@property (nonatomic,strong)  NSString *name;
 
 
 
-- (id)initWithUinqueId:(NSString *)uinqueId andCompanyToken:(NSString *)companyToken andName:(NSString*)name andCompletionHandler:(void (^)(int result))completionHandler andConnectionErrors:(void(^)(NSString *error)) connectioErrors;
+- (instancetype)initWithUinqueId:(NSString *)uinqueId andCompanyToken:(NSString *)companyToken andName:(NSString*)name;
+-(void)doRegistration:(void (^)(int result))completionHandler andConnectionErrors:(void(^)(NSString *error)) connectioErrors;
 
 
 @end

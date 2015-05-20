@@ -13,7 +13,7 @@
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *company;
 @property (strong, nonatomic) NSString *phone;
-@property (strong, nonatomic)   NSDate *registeredAt;
+@property (strong, nonatomic) NSDate *registeredAt;
 @property (strong, nonatomic) NSString *user_id;
 @property (strong, nonatomic) NSString *uniqId;
 @property (strong, nonatomic) NSString *address;

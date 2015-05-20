@@ -25,6 +25,7 @@
 -(void)stopAdvertise;
 
 - (instancetype)initWith:(NSString*)token andErr:(void (^)(int result))errors ;
+-(void)setLog:(BOOL*)set;
 
 typedef  void (^errors)(int error);
 typedef void (^founfUserCallback)(Person* person);

@@ -42,7 +42,6 @@
      //check if this device support BLE
         if ([CLLocationManager isMonitoringAvailableForClass:[CLBeaconRegion class]]){
             NSLog(@"Bluetooth LE is supported");
-            err(4);
             self.token = token;
             self.manager =[[BTLECentral alloc ] initWithToken:self.token completion:^(NSError* data) {
                 
@@ -55,7 +54,7 @@
         }
             else {
                 NSLog(@"BLE is not supported on this device");
-                err(3);
+                err(2);
             }
         
                
@@ -170,7 +169,18 @@
     NSLog(@"start scan.....");
     
     [self StopScanning];
+}
+
     
+-(void)setLog:(BOOL*)set {
+        
+        if (set){
+            //set log on
+        }
+        else {
+            //set log off
+            
+        }
     
     
 }
