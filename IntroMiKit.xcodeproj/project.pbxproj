@@ -35,6 +35,7 @@
 		5176D2201B0BCCBB00438C54 /* BTLECentral.h in Headers */ = {isa = PBXBuildFile; fileRef = 5176D1D61B0A2EB200438C54 /* BTLECentral.h */; };
 		5176D2211B0BCCBF00438C54 /* BTLECentral.m in Sources */ = {isa = PBXBuildFile; fileRef = 5176D1D71B0A2EB200438C54 /* BTLECentral.m */; };
 		5176D2221B0BCCC100438C54 /* BTLEPeripheral.h in Headers */ = {isa = PBXBuildFile; fileRef = 5176D1D81B0A2EB200438C54 /* BTLEPeripheral.h */; };
+		5176D23A1B0CCED900438C54 /* Errors.h in Headers */ = {isa = PBXBuildFile; fileRef = 5176D2391B0CCED900438C54 /* Errors.h */; settings = {ATTRIBUTES = (Private, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		5176D1DE1B0A2EB200438C54 /* ServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceManager.h; sourceTree = "<group>"; };
 		5176D1DF1B0A2EB200438C54 /* ServiceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceManager.m; sourceTree = "<group>"; };
 		5176D1E01B0A2EB200438C54 /* TransferService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferService.h; sourceTree = "<group>"; };
+		5176D2391B0CCED900438C54 /* Errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Errors.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				5176D1DF1B0A2EB200438C54 /* ServiceManager.m */,
 				5176D1E01B0A2EB200438C54 /* TransferService.h */,
 				5176D1BF1B0A2DF800438C54 /* IntroMiKit.h */,
+				5176D2391B0CCED900438C54 /* Errors.h */,
 				5176D1BD1B0A2DF800438C54 /* Supporting Files */,
 			);
 			path = IntroMiKit;
@@ -159,6 +162,7 @@
 				5176D2221B0BCCC100438C54 /* BTLEPeripheral.h in Headers */,
 				5176D1E51B0A2EB200438C54 /* Person.h in Headers */,
 				5176D2201B0BCCBB00438C54 /* BTLECentral.h in Headers */,
+				5176D23A1B0CCED900438C54 /* Errors.h in Headers */,
 				5176D1E91B0A2EB200438C54 /* ServiceManager.h in Headers */,
 				5176D1C01B0A2DF800438C54 /* IntroMiKit.h in Headers */,
 				5176D1E71B0A2EB200438C54 /* Register.h in Headers */,
@@ -347,7 +351,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MACH_O_TYPE = mh_dylib;
+				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
@@ -390,7 +394,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				MACH_O_TYPE = mh_dylib;
+				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
