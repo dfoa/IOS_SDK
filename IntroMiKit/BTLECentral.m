@@ -322,10 +322,10 @@
     Person *p =  [[Person alloc] init];
     
             p.name       = [parsedData objectForKey:@"name"];
-    NSLog(@"nameeeeeeeeeeee %@", p.name);
+    NSLog(@"name found  %@", p.name);
     if (p.name == nil) {
         
-        p.name=@"Found device but is not set";
+        p.name=@"Found device but name is not set";
     }
             p.user_id    = [parsedData objectForKey:@"user_id"];
             p.company    = [parsedData objectForKey:@"token"];

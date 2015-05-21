@@ -1,6 +1,6 @@
 //
 //  ServiceManager.h
-
+// IntoMikit
 //
 //  Created by Doron Foa on 4/23/15.
 //  Copyright (c) 2015 IntroMi. All rights reserved.
