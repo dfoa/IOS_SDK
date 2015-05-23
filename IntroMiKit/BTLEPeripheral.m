@@ -50,7 +50,7 @@
     }
     
     // We're in CBPeripheralManagerStatePoweredOn state...
-    NSLog(@"self.peripheralManager powered on.");
+    NSLog(@"self.peripheralManager powered ON.");
     NSString *characId =  [[[UIDevice currentDevice] identifierForVendor] UUIDString];
     NSLog(@"this is my ID that im going  to present %@", characId);
     // ... so build our service.
