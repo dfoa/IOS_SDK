@@ -59,7 +59,7 @@
     self.transferCharacteristic = [[CBMutableCharacteristic alloc] initWithType:[CBUUID UUIDWithString:characId]
                                                                       properties:CBCharacteristicPropertyNotify
                                                                            value:nil
-                                                                     permissions:CBAttributePermissionsReadable];
+                                                                     permissions:CBAttributePermissionsWriteable];
 
     // Then the service
     CBMutableService *transferService = [[CBMutableService alloc] initWithType:[CBUUID UUIDWithString:TRANSFER_SERVICE_UUID]
@@ -137,9 +137,13 @@
     self.peripheralManager =    [[CBPeripheralManager alloc]  initWithDelegate:self queue:self.queue ];
 }
 
-/*
+
 - (void)peripheralManager:(CBPeripheralManager *)peripheral didReceiveWriteRequests:(NSArray *)requests
 {
+    
+    NSLog(@"recieved write request");
+    
+    
     
     CBATTRequest       *request = [requests  objectAtIndex:0];
     NSData             *request_data = request.value;
@@ -149,20 +153,19 @@
     
     // Face commands this PWR RX to advertise serno UUID?
     int total_write_requests = 0;
-    if ([ write_char.UUID isEqual:[CBUUID UUIDWithString:YOUR_CHARACTERISTIC_UUID]] )
-    {
-        
-        
+//    if ([ write_char.UUID isEqual:[CBUUID UUIDWithString:YOUR_CHARACTERISTIC_UUID]] )
+ //   {
+
         // Read desired new_state data from central:
         unsigned char *new_state = (unsigned char *)[request_data   bytes];
-        my_new_state = new_state[0];
-#endif
-        NSLog(@"- advertise serno UUID: %s", my_new_state ? "TRUE" : "FALSE" );
+//  //      my_new_state = new_state[0];
+//#endif
+//        NSLog(@"- advertise serno UUID: %s", my_new_state ? "TRUE" : "FALSE" );
         
         // Select UUID that includes serno of PWR RX, for advertisements:
         
-        ++total_write_requests;
-    }
+//        ++total_write_requests;
+//    }
     
     if ( total_write_requests )
     {
@@ -173,7 +176,7 @@
         NSLog(@"_no_write_request_FAULT !!");
     }
 }
-*/
+
 
 
 @end
