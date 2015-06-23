@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
-
+#import "Person.h"
 @interface BTLEPeripheral : NSObject
 
 
@@ -20,8 +20,9 @@
 
 - (BOOL)isAdvertising;
 
-- (void)enableAdvertise;
+- (void)enableAdvertise:(void (^)(Person* dataResults))dataCallback;
 
 - (instancetype) init;
+typedef void (^foundUserCallback)(Person* person);
 
 @end

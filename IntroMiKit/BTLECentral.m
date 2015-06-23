@@ -227,7 +227,7 @@
 
 
 
-//- (void)updateServer useruui:(NSString *)uinqueId andCompanyToken:(NSString *)companyToken andCompletionHandler:(void (^)(int result))completionHandler andConnectionErrors:(void(^)(NSString *error)) connectioErrors{
+//- (void)updateServer useruui:(NSString *)uniqueId andCompanyToken:(NSString *)companyToken andCompletionHandler:(void (^)(int result))completionHandler andConnectionErrors:(void(^)(NSString *error)) connectionErrors{
 -(void)updateServer:(NSString*)foundCharacteristic  {
     
     
@@ -321,7 +321,8 @@
     
     Person *p =  [[Person alloc] init];
     
-            p.name       = [parsedData objectForKey:@"name"];
+    NSString *personToString = [NSString stringWithCString:[[parsedData objectForKey:@"name"]cStringUsingEncoding:NSISOLatin1StringEncoding] encoding:NSUTF8StringEncoding];
+    p.name       =  personToString;
     NSLog(@"name found  %@", p.name);
     if (p.name == nil) {
         
