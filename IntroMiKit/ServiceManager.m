@@ -64,7 +64,7 @@
     return self;
 }
 
--(void)startScan:(founfUserCallback)data
+-(void)startScan:(foundUserCallback)data
 {
     [self.manager stopScan];
     [self.manager enableScan:^(Person* person){
@@ -73,7 +73,7 @@
     [self createTimer];
   }
 
--(void)manualScan:(founfUserCallback)data
+-(void)manualScan:(foundUserCallback)data
 {
     NSLog(@"start manual scanning");
  //   [self.manager stopScan];
@@ -98,12 +98,15 @@
 
 }
 
--(void)startAdvertise
+-(void)startAdvertise:(foundUserCallback)data
 {
 //   [self createTimerAdvertise];
     if ([self.peripherial isAdvertising])
         [self.peripherial stopAdvertise];
-        [self.peripherial enableAdvertise];
+    [self.peripherial enableAdvertise:^(Person* person){
+        data(person);
+    }];
+
  
 }
 

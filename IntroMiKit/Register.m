@@ -28,23 +28,25 @@
 
 
 
-- (instancetype)initWithUinqueId:(NSString *)uinqueId andCompanyToken:(NSString *)companyToken andName:(NSString*)name {
+- (instancetype)initWithUniqueId:(NSString *)uniqueId andCompanyToken:(NSString *)companyToken andName:(NSString*)name {
 
    
     self = [super init];
     if(self) {
     self.userId = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
-    self.uniqueId =uinqueId;
-    self.name = name;
+    self.uniqueId =uniqueId;
+    NSString *currentDecodedString = [name stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        self.name = currentDecodedString;
+        
+        
     self.today = [[NSDate date] timeIntervalSince1970 ]*1000000;
         
     }
        return self;
 }
 
--(void)doRegistration:(void (^)(int result))completionHandler andConnectionErrors:(void(^)(NSString *error)) connectioErrors {
+-(void)doRegistration:(void (^)(int result))completionHandler andConnectionErrors:(void(^)(NSString *error)) connectionErrors {
 
-        
     NSDictionary *dict = @{@"intromi_id" : self.userId,
                                @"company_id" : self.uniqueId,
                                @"time_stamp" : @(self.today).stringValue,
